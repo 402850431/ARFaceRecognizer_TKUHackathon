@@ -3,6 +3,10 @@ package cheryl.arfacerecognizer;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+<<<<<<< HEAD
+import android.util.DisplayMetrics;
+=======
+>>>>>>> 24a0e2e874f6f321974ab189a5762b9fc8af6b17
 import android.view.MotionEvent;
 import android.util.Log;
 import android.view.View;
@@ -64,7 +68,14 @@ public class MainActivity extends AppCompatActivity {
                 switchCamera();
             }
         });
+<<<<<<< HEAD
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
         Throw_things t = new Throw_things(this);
+        t.setWH(metrics.widthPixels, metrics.heightPixels);
+=======
+        Throw_things t = new Throw_things(this);
+>>>>>>> 24a0e2e874f6f321974ab189a5762b9fc8af6b17
         this.addContentView(t,cameraView.getLayoutParams());
     }
 
