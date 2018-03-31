@@ -46,4 +46,8 @@
         android:layout_margin="8dp"
         android:text="Switch camera"/>
 
+    <!--<cheryl.arfacerecognizer.Throw_things-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"/>-->
+    <!---->
 </FrameLayout>

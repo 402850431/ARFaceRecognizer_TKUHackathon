@@ -3,6 +3,7 @@ package cheryl.arfacerecognizer;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.util.Log;
 import android.view.View;
 
@@ -63,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 switchCamera();
             }
         });
+        Throw_things t = new Throw_things(this);
+        this.addContentView(t,cameraView.getLayoutParams());
     }
 
     private boolean canSwitchCameras() {
