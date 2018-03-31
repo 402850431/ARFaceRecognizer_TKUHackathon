@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private final PermissionsDelegate permissionsDelegate = new PermissionsDelegate(this);
     private boolean hasCameraPermission;
     private CameraView cameraView;
-    private RectanglesView rectanglesView;
+    private RectangleTest rectanglesView;
 
     private FotoapparatSwitcher fotoapparatSwitcher;
     private Fotoapparat frontFotoapparat;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         cameraView = (CameraView) findViewById(R.id.camera_view);
-        rectanglesView = (RectanglesView) findViewById(R.id.rectanglesView);
+        rectanglesView = (RectangleTest) findViewById(R.id.rectanglesView);
         hasCameraPermission = permissionsDelegate.hasCameraPermission();
 
         if (hasCameraPermission) {
@@ -82,9 +82,10 @@ public class MainActivity extends AppCompatActivity {
                                 .listener(new FaceDetectorProcessor.OnFacesDetectedListener() {
                                     @Override
                                     public void onFacesDetected(List<Rectangle> faces) {
-                                        Log.d("&&&", "Detected faces: " + faces.size());
-
+                                        Log.e("&&&", "Detected faces: " + faces.size());
                                         rectanglesView.setRectangles(faces);
+                                        Log.e("&&&", "rectanglesView.getX() = " + rectanglesView.getX() + "\nrectanglesView.getY() = " + rectanglesView.getY());
+
                                     }
                                 })
                                 .build()
